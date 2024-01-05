@@ -61,8 +61,8 @@ webpki-roots = "0.25"
 [target.'cfg(any(target_os = "macos", target_os = "ios", target_os = "tvos"))'.dependencies]
 core-foundation = "0.9"
 core-foundation-sys = "0.8"
-security-framework = { git = "https://github.com/tomaszklak/rust-security-framework.git", rev = "8ad72839ab82c5dcdbadece710f3f813df76b5ce", features = ["OSX_10_14"] }
-security-framework-sys = { git = "https://github.com/tomaszklak/rust-security-framework.git", rev = "8ad72839ab82c5dcdbadece710f3f813df76b5ce", features = ["OSX_10_14"] }
+security-framework = { git = "https://github.com/kornelski/rust-security-framework.git", rev = "67a610ec215d207cd158664ab5cf6eca9552ff9f", features = ["OSX_10_14"] }
+security-framework-sys = { git = "https://github.com/kornelski/rust-security-framework.git", rev = "67a610ec215d207cd158664ab5cf6eca9552ff9f", features = ["OSX_10_14"] }
 
 [target.'cfg(windows)'.dependencies]
 winapi = { version = "0.3", features = ["wincrypt", "winerror"] }

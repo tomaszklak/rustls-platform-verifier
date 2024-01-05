@@ -669,8 +669,8 @@ dependencies = [
  "rustls",
  "rustls-native-certs",
  "rustls-webpki",
- "security-framework 2.9.2",
- "security-framework-sys 2.9.1",
+ "security-framework 2.9.2 (git+https://github.com/kornelski/rust-security-framework.git?rev=67a610ec215d207cd158664ab5cf6eca9552ff9f)",
+ "security-framework-sys 2.9.1 (git+https://github.com/kornelski/rust-security-framework.git?rev=67a610ec215d207cd158664ab5cf6eca9552ff9f)",
  "tokio",
  "webpki-roots",
  "winapi",
@@ -723,18 +723,6 @@ dependencies = [
 [[package]]
 name = "security-framework"
 version = "2.9.2"
-dependencies = [
- "bitflags",
- "core-foundation",
- "core-foundation-sys",
- "libc",
- "num-bigint",
- "security-framework-sys 2.9.1",
-]
-
-[[package]]
-name = "security-framework"
-version = "2.9.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "05b64fb303737d99b81884b2c63433e9ae28abebe5eb5045dcdd175dc2ecf4de"
 dependencies = [
@@ -746,8 +734,23 @@ dependencies = [
 ]
 
 [[package]]
+name = "security-framework"
+version = "2.9.2"
+source = "git+https://github.com/kornelski/rust-security-framework.git?rev=67a610ec215d207cd158664ab5cf6eca9552ff9f#67a610ec215d207cd158664ab5cf6eca9552ff9f"
+dependencies = [
+ "bitflags",
+ "core-foundation",
+ "core-foundation-sys",
+ "libc",
+ "num-bigint",
+ "security-framework-sys 2.9.1 (git+https://github.com/kornelski/rust-security-framework.git?rev=67a610ec215d207cd158664ab5cf6eca9552ff9f)",
+]
+
+[[package]]
 name = "security-framework-sys"
 version = "2.9.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e932934257d3b408ed8f30db49d85ea163bfe74961f017f405b025af298f0c7a"
 dependencies = [
  "core-foundation-sys",
  "libc",
@@ -756,8 +759,7 @@ dependencies = [
 [[package]]
 name = "security-framework-sys"
 version = "2.9.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e932934257d3b408ed8f30db49d85ea163bfe74961f017f405b025af298f0c7a"
+source = "git+https://github.com/kornelski/rust-security-framework.git?rev=67a610ec215d207cd158664ab5cf6eca9552ff9f#67a610ec215d207cd158664ab5cf6eca9552ff9f"
 dependencies = [
  "core-foundation-sys",
  "libc",
